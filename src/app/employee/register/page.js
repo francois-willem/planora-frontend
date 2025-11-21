@@ -1,5 +1,5 @@
 // src/app/employee/register/page.js
-'use client'
+"use client"
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';

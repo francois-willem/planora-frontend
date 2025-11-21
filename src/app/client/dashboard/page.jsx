@@ -1,5 +1,5 @@
 // src/app/client/dashboard.tsx
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ThemeProvider } from '../../../../lib/ThemeContext';

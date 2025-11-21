@@ -1,5 +1,5 @@
 // components/ClientAuthButtons.js
-'use client'
+"use client"
 import { useState } from 'react';
 
 export default function ClientAuthButtons({ businessSlug = 'client', className = '' }) {

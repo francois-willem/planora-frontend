@@ -1,5 +1,5 @@
 // src/app/client/thank-you/page.js
-'use client'
+"use client"
 import Link from 'next/link';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import ThemeToggle from '../../../../components/ThemeToggle';

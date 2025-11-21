@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { adminStats } from '../../lib/adminData';
 
 export default function AdminStats({ businesses }) {

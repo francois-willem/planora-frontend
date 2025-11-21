@@ -1,5 +1,5 @@
 // components/AuthButton.js
-'use client'
+"use client"
 import { useState } from 'react';
 import Link from 'next/link';
 import { authConfig } from '../lib/auth';

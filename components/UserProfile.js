@@ -2,7 +2,7 @@
 // User profile dropdown component that shows user information and navigation options
 // This component displays the current user's avatar, name, role, and provides access to their dashboard
 
-'use client' // This directive tells Next.js this component runs on the client side
+"use client" // This directive tells Next.js this component runs on the client side
 import { useState, useEffect } from 'react'; // React hooks for state management and side effects
 import { authState, authConfig } from '../lib/auth'; // Authentication utilities
 

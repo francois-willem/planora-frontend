@@ -1,5 +1,5 @@
 // src/app/employee/pending-approval/page.jsx
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import Navbar from '../../../../components/Navbar';

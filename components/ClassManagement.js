@@ -2,7 +2,7 @@
 // This component manages swimming classes for a business
 // It allows creating, editing, and deleting classes with different types (group/private)
 
-'use client' // This directive tells Next.js this component runs on the client side
+"use client" // This directive tells Next.js this component runs on the client side
 import { useState, useEffect } from 'react'; // React hooks for state management and side effects
 import { authConfig } from '../lib/auth'; // Authentication utilities for making API calls
 import { buildApiUrl, API_ENDPOINTS } from '../lib/config'; // API configuration and URL building

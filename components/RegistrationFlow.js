@@ -1,5 +1,5 @@
 // components/RegistrationFlow.js
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import { buildApiUrl, API_ENDPOINTS } from '../lib/config';
 

@@ -1,5 +1,5 @@
 // src/app/business/pending-approval/page.js
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
@@ -163,7 +163,7 @@ export default function BusinessPendingApprovalPage() {
                     </div>
                     <div>
                       <p className="text-sm text-slate-700 dark:text-slate-300">
-                        You'll receive an email notification once your account is approved.
+                        You&apos;ll receive an email notification once your account is approved.
                       </p>
                     </div>
                   </div>
@@ -173,7 +173,7 @@ export default function BusinessPendingApprovalPage() {
                     </div>
                     <div>
                       <p className="text-sm text-slate-700 dark:text-slate-300">
-                        You'll be able to access your business dashboard and start managing your classes.
+                        You&apos;ll be able to access your business dashboard and start managing your classes.
                       </p>
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export default function BusinessPendingApprovalPage() {
                   Need Help?
                 </h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 mb-4">
-                  If you have any questions about your account status or need assistance, please don't hesitate to contact us.
+                  If you have any questions about your account status or need assistance, please don&apos;t hesitate to contact us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link

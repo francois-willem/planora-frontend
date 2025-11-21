@@ -1,4 +1,4 @@
-'use client' // This directive tells Next.js this component runs on the client side
+"use client" // This directive tells Next.js this component runs on the client side
 import { useState, useEffect } from 'react'; // React hook for managing component state
 import Link from 'next/link'; // Next.js component for client-side navigation
 import Logo from './Logo'; // Custom logo component

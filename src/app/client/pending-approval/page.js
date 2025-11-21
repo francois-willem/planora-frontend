@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
@@ -160,7 +160,7 @@ export default function ClientPendingApprovalPage() {
             <span className="font-semibold text-yellow-600 dark:text-yellow-400">{businessInfo?.name || 'your business'}</span> is currently pending approval by the business administrator.
           </p>
           <p className="text-slate-600 dark:text-slate-400 mb-8">
-            You'll be able to access your client dashboard once your account has been approved.
+            You&apos;ll be able to access your client dashboard once your account has been approved.
           </p>
 
           {businessInfo && (

@@ -1,5 +1,5 @@
 // components/InstructorInvitation.js
-'use client'
+"use client"
 import { useState } from 'react';
 import { authConfig } from '../lib/auth';
 import { buildApiUrl } from '../lib/config';

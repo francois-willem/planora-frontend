@@ -2,7 +2,7 @@
 // Business authentication buttons component
 // Provides login and registration buttons specifically for business users
 
-'use client' // This directive tells Next.js this component runs on the client side
+"use client" // This directive tells Next.js this component runs on the client side
 import { useState } from 'react'; // React hook for managing component state
 import Link from 'next/link'; // Next.js component for client-side navigation
 

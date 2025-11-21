@@ -1,5 +1,5 @@
 // components/SessionManagement.js
-'use client'
+"use client"
 import { useState, useEffect, useRef } from 'react';
 import { authConfig } from '../lib/auth';
 import { buildApiUrl, API_ENDPOINTS } from '../lib/config';

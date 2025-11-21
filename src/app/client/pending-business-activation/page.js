@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
@@ -177,14 +177,14 @@ export default function ClientPendingBusinessActivationPage() {
 
           <h1 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4">Business Pending Activation</h1>
           <p className="text-slate-600 dark:text-slate-400 mb-6">
-            The business you're registered with{' '}
+            The business you&apos;re registered with{' '}
             <span className="font-semibold text-blue-600 dark:text-blue-400">{businessInfo?.name || 'your business'}</span> is{' '}
             <span className={`font-semibold ${getStatusColor(businessInfo?.status)}`}>
               {getStatusMessage(businessInfo?.status)}
             </span>.
           </p>
           <p className="text-slate-600 dark:text-slate-400 mb-8">
-            You'll be able to access your client dashboard once the business administrator activates their account.
+            You&apos;ll be able to access your client dashboard once the business administrator activates their account.
           </p>
 
           {businessInfo && (

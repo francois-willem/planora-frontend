@@ -1,5 +1,5 @@
 // app/pricing/page.js
-'use client'
+"use client"
 import Link from "next/link";
 import { BusinessRegisterButton } from "../../../components/BusinessAuthButtons";
 import { TierProvider } from "../../../lib/TierContext";

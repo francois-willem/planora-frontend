@@ -233,7 +233,7 @@ Required environment variables:
 - Uses Turbopack for faster development builds
 - App Router is used instead of Pages Router
 - Server components are used where appropriate
-- Client components marked with `'use client'` directive
+- Client components marked with `"use client"` directive
 
 ## 🤝 Contributing
 

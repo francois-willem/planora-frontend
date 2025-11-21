@@ -1,5 +1,5 @@
 // components/ClientProfileUpdate.js
-'use client'
+"use client"
 import { useState } from 'react';
 import { authConfig } from '../lib/auth';
 import { buildApiUrl, API_ENDPOINTS } from '../lib/config';

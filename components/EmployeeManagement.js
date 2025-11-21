@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { useState, useEffect } from 'react';
 import { authConfig } from '../lib/auth';
 import { buildApiUrl, API_ENDPOINTS } from '../lib/config';
