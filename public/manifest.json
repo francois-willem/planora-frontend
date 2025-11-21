@@ -1,0 +1,22 @@
+{
+  "name": "Planora - Smart Scheduling for Swim Schools",
+  "short_name": "Planora",
+  "description": "Manage classes, track attendance, handle cancellations, and keep instructor notes—all in one powerful platform for swim schools and educational institutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/planora-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}
