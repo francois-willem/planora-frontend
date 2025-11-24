@@ -119,14 +119,7 @@ export default function PricingPage() {
             </div>
 
             {/* Growth Plan */}
-            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-xl border-2 border-blue-200 dark:border-blue-600 hover:shadow-2xl transition-all duration-300 relative">
-              {/* Popular Badge */}
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              
+            <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 relative">
               <div className="text-center mb-8">
                 <h4 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Growth</h4>
                 <div className="mb-4">
