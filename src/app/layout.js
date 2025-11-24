@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Planora - Smart Scheduling for Swim Schools",
+  title: "Planora - Smart Scheduling & Online Booking Software for Businesses",
   description: "Manage classes, track attendance, handle cancellations, and keep instructor notes—all in one powerful platform for swim schools and educational institutions.",
   manifest: '/manifest.json',
   icons: {

@@ -89,9 +89,11 @@ export default function PricingPage() {
             <div className="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-700 hover:shadow-xl transition-all duration-300 relative">
               <div className="text-center mb-8">
                 <h4 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Starter</h4>
-                <div className="mb-2">
-                  <span className="text-4xl font-bold text-blue-600 dark:text-blue-400">R1,000</span>
-                  <span className="text-slate-600 dark:text-slate-300">/month</span>
+                <div className="mb-4">
+                  <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                    <span className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-2 animate-pulse"></span>
+                    Coming Soon
+                  </div>
                 </div>
                 <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">Everything in Basic, plus:</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Up to 150 client accounts</p>
@@ -127,9 +129,11 @@ export default function PricingPage() {
               
               <div className="text-center mb-8">
                 <h4 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">Growth</h4>
-                <div className="mb-2">
-                  <span className="text-4xl font-bold text-blue-600 dark:text-blue-400">R2,500</span>
-                  <span className="text-slate-600 dark:text-slate-300">/month</span>
+                <div className="mb-4">
+                  <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                    <span className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-2 animate-pulse"></span>
+                    Coming Soon
+                  </div>
                 </div>
                 <p className="text-sm text-slate-500 dark:text-slate-400">Everything in Starter, plus:</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">Up to 200 client accounts</p>
