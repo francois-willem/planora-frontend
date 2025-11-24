@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import Navbar from '../../../../components/Navbar';
+import { buildApiUrl, API_ENDPOINTS } from '../../../../lib/config';
 
 export default function EmployeeRegisterPage() {
   const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ export default function EmployeeRegisterPage() {
       }
 
       // Register employee with Express backend using business code
-      const response = await fetch('http://localhost:4000/api/auth/register-with-code', {
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.REGISTER_WITH_CODE), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

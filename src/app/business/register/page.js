@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import ThemeToggle from '../../../../components/ThemeToggle';
 import Logo from '../../../../components/Logo';
+import { buildApiUrl, API_ENDPOINTS } from '../../../../lib/config';
 // Business registration will be handled by Express backend
 
 export default function BusinessRegisterPage() {
@@ -63,7 +64,7 @@ export default function BusinessRegisterPage() {
 
     try {
       // Register business with Express backend
-      const response = await fetch('http://localhost:4000/api/businesses/register', {
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.BUSINESSES_REGISTER), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

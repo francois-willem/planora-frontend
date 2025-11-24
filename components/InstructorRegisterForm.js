@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import { buildApiUrl } from '../lib/config';
 
 export default function InstructorRegisterForm() {
   const [formData, setFormData] = useState({
@@ -27,7 +28,7 @@ export default function InstructorRegisterForm() {
 
   const validateInvitation = useCallback(async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/auth/validate-invitation?token=${invitationToken}`);
+      const response = await fetch(`${buildApiUrl('/auth/validate-invitation')}?token=${invitationToken}`);
       const data = await response.json();
       
       if (response.ok && data.success) {
@@ -64,7 +65,7 @@ export default function InstructorRegisterForm() {
         return;
       }
 
-      const response = await fetch('http://localhost:4000/api/auth/register-with-invitation', {
+      const response = await fetch(buildApiUrl('/auth/register-with-invitation'), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import ThemeToggle from '../../../../components/ThemeToggle';
 import Logo from '../../../../components/Logo';
+import { buildApiUrl, API_ENDPOINTS } from '../../../../lib/config';
 // Business login will be handled by Express backend
 
 
@@ -25,7 +26,7 @@ export default function BusinessLoginPage() {
 
     try {
       // Handle login with Express backend
-      const response = await fetch('http://localhost:4000/api/auth/login', {
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.LOGIN), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import ThemeToggle from '../../../../components/ThemeToggle';
 import Logo from '../../../../components/Logo';
+import { buildApiUrl, API_ENDPOINTS } from '../../../../lib/config';
 
 export default function ClientRegisterPage() {
   const [formData, setFormData] = useState({
@@ -48,7 +49,7 @@ export default function ClientRegisterPage() {
       }
 
       // Register client with Express backend using business code
-      const response = await fetch('http://localhost:4000/api/auth/register-with-code', {
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.REGISTER_WITH_CODE), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

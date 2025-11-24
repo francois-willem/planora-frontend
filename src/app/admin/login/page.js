@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { ThemeProvider } from '../../../../lib/ThemeContext';
 import ThemeToggle from '../../../../components/ThemeToggle';
 import Logo from '../../../../components/Logo';
+import { buildApiUrl, API_ENDPOINTS } from '../../../../lib/config';
 // Admin login will be handled by Express backend
 
 export default function AdminLoginPage() {
@@ -23,7 +24,7 @@ export default function AdminLoginPage() {
 
     try {
       // Handle admin login with Express backend
-      const response = await fetch('http://localhost:4000/api/auth/login', {
+      const response = await fetch(buildApiUrl(API_ENDPOINTS.LOGIN), {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

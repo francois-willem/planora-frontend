@@ -10,6 +10,7 @@ import ClassManagement from '../../../../components/ClassManagement';
 import EmployeeManagement from '../../../../components/EmployeeManagement';
 import SessionManagement from '../../../../components/SessionManagement';
 import { authConfig } from '../../../../lib/auth';
+import { buildApiUrl } from '../../../../lib/config';
 
 export default function BusinessDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -59,7 +60,7 @@ export default function BusinessDashboard() {
         return;
       }
       
-      const response = await fetch(`http://localhost:4000/api/businesses/${businessId}/dashboard`, {
+      const response = await fetch(buildApiUrl(`/businesses/${businessId}/dashboard`), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -136,7 +137,7 @@ export default function BusinessDashboard() {
       const token = localStorage.getItem('authToken');
       console.log('Fetching clients for business ID:', businessId);
       
-      const response = await fetch(`http://localhost:4000/api/clients`, {
+      const response = await fetch(buildApiUrl('/clients'), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -173,7 +174,7 @@ export default function BusinessDashboard() {
       const token = localStorage.getItem('authToken');
       console.log('Fetching pending catch-up approvals for business ID:', businessId);
       
-      const response = await fetch(`http://localhost:4000/api/clients/pending-catchup-approval`, {
+      const response = await fetch(buildApiUrl('/clients/pending-catchup-approval'), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -226,9 +227,10 @@ export default function BusinessDashboard() {
       }
       
       console.log('Fetching catch-up requests for business ID:', businessId);
-      console.log('Request URL:', `http://localhost:4000/api/clients/catchup-requests`);
+      const catchupRequestsUrl = buildApiUrl('/clients/catchup-requests');
+      console.log('Request URL:', catchupRequestsUrl);
       
-      const response = await fetch(`http://localhost:4000/api/clients/catchup-requests`, {
+      const response = await fetch(catchupRequestsUrl, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -285,7 +287,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/catchup-approve-session/${notificationId}`, {
+      const response = await fetch(buildApiUrl(`/clients/catchup-approve-session/${notificationId}`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -318,7 +320,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/catchup-reject-session/${notificationId}`, {
+      const response = await fetch(buildApiUrl(`/clients/catchup-reject-session/${notificationId}`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -351,7 +353,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/${clientId}/catchup-approve`, {
+      const response = await fetch(buildApiUrl(`/clients/${clientId}/catchup-approve`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -385,7 +387,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/${clientId}/catchup-reject`, {
+      const response = await fetch(buildApiUrl(`/clients/${clientId}/catchup-reject`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -423,7 +425,7 @@ export default function BusinessDashboard() {
       const token = localStorage.getItem('authToken');
       console.log('Fetching pending clients for business ID:', businessId);
       
-      const response = await fetch(`http://localhost:4000/api/businesses/${businessId}/pending-requests`, {
+      const response = await fetch(buildApiUrl(`/businesses/${businessId}/pending-requests`), {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -456,7 +458,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/businesses/${businessId}/approve-request`, {
+      const response = await fetch(buildApiUrl(`/businesses/${businessId}/approve-request`), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -488,7 +490,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/businesses/${businessId}/reject-request`, {
+      const response = await fetch(buildApiUrl(`/businesses/${businessId}/reject-request`), {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -519,7 +521,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/${clientId}/status`, {
+      const response = await fetch(buildApiUrl(`/clients/${clientId}/status`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -553,7 +555,7 @@ export default function BusinessDashboard() {
     try {
       const token = localStorage.getItem('authToken');
       
-      const response = await fetch(`http://localhost:4000/api/clients/${clientId}/status`, {
+      const response = await fetch(buildApiUrl(`/clients/${clientId}/status`), {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`,
