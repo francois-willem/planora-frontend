@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "../../lib/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
+import ServiceWorkerRegistration from "../../components/ServiceWorkerRegistration";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <meta name="theme-color" content="#2563eb" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Planora" />
         <link rel="icon" href="/favicon.ico" sizes="16x16" type="image/x-icon" />
         <link rel="icon" href="/favicon.png" sizes="32x32" type="image/png" />
         <link rel="icon" href="/planora-logo.png" sizes="192x192" type="image/png" />
@@ -54,6 +61,7 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-VSRXPSNL8N');
           `}
         </Script>
+        <ServiceWorkerRegistration />
         <ThemeProvider>
           {children}
         </ThemeProvider>
