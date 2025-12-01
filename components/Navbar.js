@@ -103,6 +103,10 @@ export default function Navbar({
               <Link href="/" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 Home
               </Link>
+              {/* About page link */}
+              <Link href="/about" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
+                About
+              </Link>
               {/* Pricing page link */}
               <Link href="/pricing" className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium">
                 Pricing
@@ -180,6 +184,14 @@ export default function Navbar({
                   onClick={() => setIsMobileMenuOpen(false)} // Close menu when link is clicked
                 >
                   Home
+                </Link>
+                {/* About link - closes menu when clicked */}
+                <Link 
+                  href="/about" 
+                  className="block text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium py-2"
+                  onClick={() => setIsMobileMenuOpen(false)} // Close menu when link is clicked
+                >
+                  About
                 </Link>
                 {/* Pricing link - closes menu when clicked */}
                 <Link 
