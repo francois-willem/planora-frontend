@@ -252,3 +252,4 @@ When contributing to the frontend:
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Backend README](../planora-backend/README.md) - Backend API documentation
 
+

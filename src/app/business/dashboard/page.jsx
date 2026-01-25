@@ -839,9 +839,6 @@ export default function BusinessDashboard() {
               <div className="space-y-4">
                 <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                   <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">Client Management</h3>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 sm:py-2 rounded-lg transition-colors duration-200 font-medium text-sm sm:text-base w-full sm:w-auto">
-                    Add New Client
-                  </button>
                 </div>
 
                 {/* Pending Client Requests */}

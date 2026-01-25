@@ -170,3 +170,4 @@ If you encounter issues:
 3. Verify backend API is running and accessible
 4. Ensure environment variables are set correctly
 
+

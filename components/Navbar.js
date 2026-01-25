@@ -5,6 +5,7 @@ import Logo from './Logo'; // Custom logo component
 import ThemeToggle from './ThemeToggle'; // Dark/light mode toggle component
 import UserProfile from './UserProfile'; // User profile dropdown component
 import { BusinessLoginButton, BusinessRegisterButton } from './BusinessAuthButtons'; // Business-specific auth buttons
+import { useRouter } from 'next/navigation'; // Next.js router for navigation
 import { authState, authConfig } from '../lib/auth'; // Authentication utilities
 
 // Navbar component - the main navigation bar for the application
@@ -23,6 +24,14 @@ export default function Navbar({
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   // State to track if user is logged in
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // Router for navigation
+  const router = useRouter();
+
+  // Handle logout
+  const handleLogout = async () => {
+    await authConfig.signOut();
+    router.push('/login');
+  };
 
   // Check if user is logged in
   useEffect(() => {
@@ -119,9 +128,20 @@ export default function Navbar({
           
           {/* User Info - displayed on dashboard pages when user is logged in */}
           {userInfo && (
-            <div className="text-right">
-              <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{userInfo.welcome}</p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">{userInfo.role}</p>
+            <div className="flex items-center space-x-4">
+              <div className="text-right">
+                <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{userInfo.welcome}</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">{userInfo.role}</p>
+              </div>
+              <button
+                onClick={handleLogout}
+                className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-red-600 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors duration-200"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>Logout</span>
+              </button>
             </div>
           )}
           
@@ -209,6 +229,18 @@ export default function Navbar({
               <div className="pt-3 border-t border-slate-200 dark:border-slate-700">
                 <p className="text-sm font-medium text-slate-900 dark:text-slate-100">{userInfo.welcome}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400">{userInfo.role}</p>
+                <button
+                  onClick={() => {
+                    handleLogout();
+                    setIsMobileMenuOpen(false);
+                  }}
+                  className="mt-3 w-full flex items-center justify-center space-x-2 px-4 py-2 text-sm font-medium text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors duration-200 border border-red-200 dark:border-red-800"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                  <span>Logout</span>
+                </button>
               </div>
             )}
             

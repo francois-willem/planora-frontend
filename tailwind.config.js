@@ -9,7 +9,25 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Light mode semantic colors
+        background: {
+          DEFAULT: '#F8FAFC',
+          card: '#FFFFFF',
+        },
+        foreground: {
+          DEFAULT: '#0F172A',
+          secondary: '#475569',
+        },
+        border: '#E2E8F0',
+        'hover-bg': '#F1F5F9',
+        primary: {
+          DEFAULT: '#2563EB',
+          hover: '#1D4ED8',
+        },
+      },
+    },
   },
   plugins: [],
 }
