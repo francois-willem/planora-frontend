@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "../../lib/ThemeContext";
-import { Analytics } from "@vercel/analytics/next";
 import ServiceWorkerRegistration from "../../components/ServiceWorkerRegistration";
+import CookieBanner from "../../components/CookieBanner.js";
+import AnalyticsScripts from "../../components/AnalyticsScripts.js";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,23 +49,16 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-VSRXPSNL8N"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-VSRXPSNL8N');
-          `}
-        </Script>
+        {/* Analytics scripts are gated behind consent */}
+        <AnalyticsScripts />
+        
         <ServiceWorkerRegistration />
         <ThemeProvider>
           {children}
         </ThemeProvider>
-        <Analytics />
+        
+        {/* Cookie consent banner - shows until user makes a choice */}
+        <CookieBanner />
       </body>
     </html>
   );

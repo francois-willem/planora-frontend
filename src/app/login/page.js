@@ -276,6 +276,12 @@ export default function UnifiedLoginPage() {
                     Register your business
                   </Link>
                 </p>
+                <p className="text-sm text-slate-600 dark:text-slate-300">
+                  Joining as staff?{' '}
+                  <Link href="/employee/register" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                    Register as an employee
+                  </Link>
+                </p>
               </div>
             </div>
           </form>

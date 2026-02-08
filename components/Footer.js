@@ -1,5 +1,6 @@
 "use client"
 import Logo from './Logo';
+import CookieSettingsButton from './CookieSettingsButton.js';
 
 export default function Footer({ 
   variant = "default",
@@ -93,6 +94,13 @@ export default function Footer({
               <div className="text-slate-400 dark:text-slate-500 text-center md:text-right">
                 <p>&copy; {new Date().getFullYear()} Planora. All rights reserved.</p>
                 <p className="text-sm mt-1">Built with Next.js and Express</p>
+                <div className="mt-2 flex gap-4 justify-center md:justify-end items-center">
+                  <a href="/cookies" className="text-sm hover:text-white transition-colors">
+                    Cookie Policy
+                  </a>
+                  <span className="text-slate-600">|</span>
+                  <CookieSettingsButton variant="link" />
+                </div>
               </div>
             </div>
           )}
